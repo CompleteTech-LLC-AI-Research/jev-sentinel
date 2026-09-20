@@ -1,0 +1,10 @@
+{
+  "stage": "tool_before",
+  "harness": "custom",
+  "profile": "local-demo",
+  "source": "agent",
+  "content": "",
+  "session_id": "canary-only",
+  "tool_name": "shell",
+  "tool_input": {"command": "echo JEV_SENTINEL_TEST_BLOCK"}
+}

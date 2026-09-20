@@ -1,0 +1,16 @@
+# Local credentials and environment overrides
+.env
+.env.*
+!.env.example
+
+# Python environments and generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
