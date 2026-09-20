@@ -1,4 +1,16 @@
-# JEV Sentinel — multi-harness reference implementation
+<div align="center">
+
+# JEV Sentinel
+
+**Observe agent boundaries. Evaluate risk. Keep authorization with the host.**
+
+![Python: 3.10%2B](https://img.shields.io/badge/Python-3.10%2B-3776ab?style=flat-square) ![Adapters: 9](https://img.shields.io/badge/Adapters-9-0f766e?style=flat-square) ![Status: Reference_implementation](https://img.shields.io/badge/Status-Reference_implementation-a16207?style=flat-square)
+
+[Install](#install) · [Harness coverage](#native-coverage-at-a-glance) · [Python SDK](#other-entry-points) · [Security](SECURITY.md) · [Operations](docs/OPERATIONS.md)
+
+</div>
+
+---
 
 A local, plan-first installer for **OpenClaw, Hermes, OpenCode, Codex, Claude Code,
 Pi, Gemini CLI, Cursor, and GitHub Copilot CLI**, with a shared security evaluator.
@@ -10,6 +22,24 @@ call is performed by Sentinel during installation.
 against upstream documentation on September 19, 2026. Tests exercise the code,
 installer and simulated host contracts; they do not establish deployment success
 inside every real harness, Jev detection accuracy, or jailbreak resistance.
+
+## How Sentinel fits
+
+```mermaid
+flowchart LR
+    E[Harness event] --> A[Native adapter]
+    A --> P{Configured evaluator}
+    P --> L[Local rules]
+    P --> J[Opt-in Jev API]
+    L --> V[Shadow observation or supported veto]
+    J --> V
+    V --> O[Local incident outbox]
+    V --> H[Host authorization remains in force]
+```
+
+| Start locally | Evaluate deliberately | Inspect the evidence |
+| --- | --- | --- |
+| Preview installation before writing configuration. | Begin in shadow mode; enable remote evaluation explicitly. | Review local incidents and each adapter's documented coverage. |
 
 ## Install
 
