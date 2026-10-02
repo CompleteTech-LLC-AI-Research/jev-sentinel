@@ -1,3 +1,5 @@
+<p align="center"><img src="assets/banner.jpg" alt="An observatory dome on a mountain ridge with a teal scanning beam, a violet shield halo and nine smaller domes linked in a ring around it." width="100%"></p>
+
 <div align="center">
 
 # JEV Sentinel
